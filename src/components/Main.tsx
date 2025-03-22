@@ -5,7 +5,7 @@ interface AppProps {
   placesCount: number;
 }
 
-export const App: FC<AppProps> = ({ placesCount }) => (
+export const Main: FC<AppProps> = ({ placesCount }) => (
   <div className="page page--gray page--main">
     <header className="header">
       <div className="container">
