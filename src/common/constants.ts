@@ -1,7 +1,7 @@
-export const ROUTE = {
+export const route = {
   main: '/',
   login: '/login',
   favorites: '/favorites',
-  offer: '/offer/:id',
+  offer: (id: string = 'id') => `/offer/:${id}`,
   other: '*'
 };
