@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 
-const MINIMUM_REVIEW_LENGTH = 10;
+const MINIMUM_REVIEW_LENGTH = 33;
 
 export const ReviewForm: FC = () => {
   const [reviewText, setReviewText] = useState('');
