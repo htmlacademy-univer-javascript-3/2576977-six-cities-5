@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { OfferItem } from '../common/types';
-import { FavoritesList } from './FavoritesList';
-import { route } from '../common/constants';
 import { Link } from 'react-router-dom';
+import { FavoritesList } from '../components/FavoritesList';
+import { OfferItem } from '../types/offer';
+import { route } from '../constants/route';
 
 const groupByCityName = (offers: OfferItem[]): Record<string, OfferItem[]> => offers.reduce<Record<string, OfferItem[]>>((acc, cur) => (
   {

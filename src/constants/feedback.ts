@@ -1,0 +1,1 @@
+export const MINIMUM_REVIEW_LENGTH = 33;

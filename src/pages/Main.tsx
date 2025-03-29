@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { OfferItem } from '../common/types';
-import { OffersList } from './OffersList';
 import { Link } from 'react-router-dom';
-import { route } from '../common/constants';
+import { OffersList } from '../components/OffersList';
+import { OfferItem } from '../types/offer';
+import { route } from '../constants/route';
 
 interface MainProps {
   offers: OfferItem[];

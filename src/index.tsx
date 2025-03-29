@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Main } from './components/Main';
-import { route } from './common/constants';
-import { Login } from './components/Login';
-import { Favorites } from './components/Favorites';
-import { Offer } from './components/Offer';
-import { NotFound } from './components/NotFound';
 import { PrivateRoute } from './components/PrivateRoute';
 import { offers } from './mocks/offers';
+import { route } from './constants/route';
+import { Main } from './pages/Main';
+import { Login } from './pages/Login';
+import { Favorites } from './pages/Favorites';
+import { Offer } from './pages/Offer';
+import { NotFound } from './pages/NotFound';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { route } from '../common/constants';
+import { route } from '../constants/route';
 
 export const OfferNotLogged: FC = () => (
   <div className="page">

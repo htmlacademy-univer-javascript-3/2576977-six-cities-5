@@ -1,4 +1,4 @@
-import { OfferItem } from '../common/types';
+import { OfferItem } from '../types/offer';
 
 export const offers: OfferItem[] = [
   {
@@ -111,7 +111,7 @@ export const offers: OfferItem[] = [
       longitude: 50.35514938496378,
       zoom: 7,
     },
-    isFavorite: true,
+    isFavorite: false,
     isPremium: false,
     rating: 2,
     previewImage: 'https://picsum.photos/260/200',

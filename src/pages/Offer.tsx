@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { ReviewForm } from './ReviewForm';
 import { Link } from 'react-router-dom';
-import { route } from '../common/constants';
+import { ReviewForm } from '../components/ReviewForm';
+import { route } from '../constants/route';
 
 export const Offer: FC = () => (
   <div className="page">
