@@ -2,8 +2,14 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { ReviewForm } from '../components/ReviewForm';
 import { route } from '../constants/route';
+import { MapSection } from '../components/Map/Map';
+import { OfferItem } from '../types/offer';
 
-export const Offer: FC = () => (
+interface OfferProps {
+  offers: OfferItem[];
+}
+
+export const Offer: FC<OfferProps> = ({offers}) => (
   <div className="page">
     <header className="header">
       <div className="container">
@@ -183,7 +189,21 @@ export const Offer: FC = () => (
             </section>
           </div>
         </div>
-        <section className="offer__map map"></section>
+        <MapSection
+          mapSectionType="offer"
+          city={{
+            title: 'Amsterdam',
+            lat: 52.3609553943508,
+            lng: 4.85309666406198,
+            zoom: 10,
+          }}
+          points={offers.map((el) => ({
+            title: el.title,
+            lat: el.location.latitude,
+            lng: el.location.longitude,
+          }))}
+          selectedPoint={undefined}
+        />
       </section>
       <div className="container">
         <section className="near-places places">

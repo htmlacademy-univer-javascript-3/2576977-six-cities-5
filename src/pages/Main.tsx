@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { OffersList } from '../components/OffersList';
 import { OfferItem } from '../types/offer';
 import { route } from '../constants/route';
+import { MapSection } from '../components/Map/Map';
 
 interface MainProps {
   offers: OfferItem[];
@@ -111,7 +112,21 @@ export const Main: FC<MainProps> = ({ offers }) => (
               <OffersList offers={offers} />
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map"></section>
+              <MapSection
+                mapSectionType="cities"
+                city={{
+                  title: 'Amsterdam',
+                  lat: 52.3609553943508,
+                  lng: 4.85309666406198,
+                  zoom: 10,
+                }}
+                points={ offers.map((el) => ({
+                  title: el.title,
+                  lat: el.location.latitude,
+                  lng: el.location.longitude,
+                }))}
+                selectedPoint={undefined}
+              />
             </div>
           </div>
         )}

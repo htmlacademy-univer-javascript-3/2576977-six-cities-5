@@ -26,7 +26,7 @@ root.render(
           </PrivateRoute>
         }
         />
-        <Route path={route.offer()} element={<Offer />} />
+        <Route path={route.offer()} element={<Offer offers={offers} />} />
         <Route path={route.other} element={<NotFound />} />
       </ Routes>
     </BrowserRouter>
