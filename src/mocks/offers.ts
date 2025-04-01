@@ -1,4 +1,4 @@
-import { OfferItem } from '../common/types';
+import { OfferItem } from '../types/offer';
 
 export const offers: OfferItem[] = [
   {
@@ -9,13 +9,13 @@ export const offers: OfferItem[] = [
     city: {
       name: 'Amsterdam',
       location: {
-        latitude: 35.35514938496378,
-        longitude: 44.35514938496378,
+        latitude: 52.3909553943508,
+        longitude: 4.929309666406198,
         zoom: 6,
       }
     },
     location: {
-      latitude: 35.35514938496378,
+      latitude: 52.3909553943508,
       longitude: 44.35514938496378,
       zoom: 6,
     },
@@ -32,14 +32,60 @@ export const offers: OfferItem[] = [
     city: {
       name: 'Amsterdam',
       location: {
-        latitude: 35.35514938496378,
-        longitude: 44.35514938496378,
+        latitude: 52.3909553943508,
+        longitude: 4.929309666406198,
         zoom: 6,
       }
     },
     location: {
-      latitude: 35.35914938496378,
-      longitude: 44.35914938496378,
+      latitude: 52.3909553943508,
+      longitude: 4.85309666406198,
+      zoom: 6,
+    },
+    isFavorite: true,
+    isPremium: false,
+    rating: 1,
+    previewImage: 'https://picsum.photos/260/200',
+  },
+  {
+    id: '12',
+    title: 'Not so good location',
+    type: 'apartment',
+    price: 20,
+    city: {
+      name: 'Amsterdam',
+      location: {
+        latitude: 52.3909553943508,
+        longitude: 4.929309666406198,
+        zoom: 6,
+      }
+    },
+    location: {
+      latitude: 52.3609553943508,
+      longitude: 4.85309666406198,
+      zoom: 6,
+    },
+    isFavorite: true,
+    isPremium: false,
+    rating: 1,
+    previewImage: 'https://picsum.photos/260/200',
+  },
+  {
+    id: '13',
+    title: 'Not so good location',
+    type: 'apartment',
+    price: 20,
+    city: {
+      name: 'Amsterdam',
+      location: {
+        latitude: 52.3909553943508,
+        longitude: 4.929309666406198,
+        zoom: 6,
+      }
+    },
+    location: {
+      latitude: 52.3809553943508,
+      longitude: 4.939309666406198,
       zoom: 6,
     },
     isFavorite: true,
@@ -111,7 +157,7 @@ export const offers: OfferItem[] = [
       longitude: 50.35514938496378,
       zoom: 7,
     },
-    isFavorite: true,
+    isFavorite: false,
     isPremium: false,
     rating: 2,
     previewImage: 'https://picsum.photos/260/200',

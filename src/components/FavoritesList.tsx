@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { OfferItem } from '../common/types';
-import { FavoritesCard } from './FavoritesCard';
+import { OfferItem } from '../types/offer';
+import { ListCardFavorites } from './ListCard';
 
 interface FavoritesListProps {
   title: string;
@@ -17,7 +17,7 @@ export const FavoritesList: FC<FavoritesListProps> = ({title, offers}) => (
       </div>
     </div>
     <div className="favorites__places">
-      {offers.map((offer) => <FavoritesCard key={offer.id} offer={offer} />)}
+      {offers.map((offer) => <ListCardFavorites key={offer.id} offer={offer} />)}
     </div>
   </li>
 );

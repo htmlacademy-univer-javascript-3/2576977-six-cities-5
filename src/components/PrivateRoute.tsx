@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Navigate } from 'react-router-dom';
-import { route } from '../common/constants';
+import { route } from '../constants/route';
 
 interface PrivateRouteProps {
   status: 'init' | 'auth' | 'notAuth';

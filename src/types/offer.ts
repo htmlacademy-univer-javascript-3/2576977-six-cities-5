@@ -1,4 +1,5 @@
 export type GUID = string
+export type IMAGE_URL = string
 
 export type OfferItem = {
   id: GUID;
@@ -10,7 +11,7 @@ export type OfferItem = {
   isFavorite: boolean;
   isPremium: boolean;
   rating: number;
-  previewImage: string;
+  previewImage: IMAGE_URL;
 }
 
 type City = {
@@ -23,22 +24,3 @@ type Location = {
   longitude: number;
   zoom: number;
 };
-
-export type Comment = {
-  id: string;
-  date: string;
-  user: User;
-  comment: string;
-  rating: number;
-}
-
-type User = {
-  name: string;
-  avatarUrl: string;
-  isPro: boolean;
-}
-
-export type FormData = {
-  rating: number;
-  review: string;
-}

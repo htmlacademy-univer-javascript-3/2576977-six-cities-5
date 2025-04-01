@@ -1,8 +1,15 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { route } from '../common/constants';
+import { ReviewForm } from '../components/ReviewForm';
+import { route } from '../constants/route';
+import { MapSection } from '../components/Map/Map';
+import { OfferItem } from '../types/offer';
 
-export const OfferNotLogged: FC = () => (
+interface OfferProps {
+  offers: OfferItem[];
+}
+
+export const Offer: FC<OfferProps> = ({offers}) => (
   <div className="page">
     <header className="header">
       <div className="container">
@@ -15,11 +22,17 @@ export const OfferNotLogged: FC = () => (
           <nav className="header__nav">
             <ul className="header__nav-list">
               <li className="header__nav-item user">
-                <Link className="header__nav-link header__nav-link--profile" to={route.login}>
+                <Link className="header__nav-link header__nav-link--profile" to={route.favorites}>
                   <div className="header__avatar-wrapper user__avatar-wrapper">
                   </div>
-                  <span className="header__login">Sign in</span>
+                  <span className="header__user-name user__name">Oliver.conner@gmail.com</span>
+                  <span className="header__favorite-count">3</span>
                 </Link>
+              </li>
+              <li className="header__nav-item">
+                <a className="header__nav-link" href="#">
+                  <span className="header__signout">Sign out</span>
+                </a>
               </li>
             </ul>
           </nav>
@@ -172,10 +185,25 @@ export const OfferNotLogged: FC = () => (
                   </div>
                 </li>
               </ul>
+              <ReviewForm />
             </section>
           </div>
         </div>
-        <section className="offer__map map"></section>
+        <MapSection
+          mapSectionType="offer"
+          city={{
+            title: 'Amsterdam',
+            lat: 52.3609553943508,
+            lng: 4.85309666406198,
+            zoom: 10,
+          }}
+          points={offers.map((el) => ({
+            title: el.title,
+            lat: el.location.latitude,
+            lng: el.location.longitude,
+          }))}
+          selectedPoint={undefined}
+        />
       </section>
       <div className="container">
         <section className="near-places places">

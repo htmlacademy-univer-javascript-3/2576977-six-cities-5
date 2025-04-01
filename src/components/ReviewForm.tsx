@@ -1,6 +1,5 @@
 import { FC, useState } from 'react';
-
-const MINIMUM_REVIEW_LENGTH = 33;
+import { MINIMUM_REVIEW_LENGTH } from '../constants/feedback';
 
 export const ReviewForm: FC = () => {
   const [reviewText, setReviewText] = useState('');
@@ -49,6 +48,7 @@ export const ReviewForm: FC = () => {
           </svg>
         </label>
       </div>
+
       <textarea
         className="reviews__textarea form__textarea"
         id="review"
@@ -56,9 +56,8 @@ export const ReviewForm: FC = () => {
         placeholder="Tell how was your stay, what you like and what can be improved"
         value={reviewText}
         onChange={handleReviewTextChange}
-      >
+      />
 
-      </textarea>
       <div className="reviews__button-wrapper">
         <p className="reviews__help">
           To submit review please make sure to set <span className="reviews__star">rating</span> and describe your stay with at least <b className="reviews__text-amount">{MINIMUM_REVIEW_LENGTH} characters</b>.
